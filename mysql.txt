@@ -1,0 +1,93 @@
+EXPERIMENT 1________________________________________________________
+(IN MYSQL)
+
+CREATE TABLE CLIENT(
+CNo varchar(255),
+CName varchar(255) not null,
+CCity varchar(255),
+CPincode int,
+CState varchar(255) not null,
+CBalDue varchar(255),
+primary key(CNo)
+);
+
+desc CLIENT;
+
+CREATE TABLE PRODUCT(
+PNo varchar(255),
+PDetail varchar(255) not null,
+PProfit int,
+PUnit varchar(255),
+PQty int not null,
+PReorder int not null,
+PCP int not null,
+PSP int not null,
+primary key(PNo)
+);
+
+desc PRODUCT;
+
+CREATE TABLE SALESMAN(
+SNo varchar(255),
+SName varchar(255) not null,
+SAddress1 varchar(255),
+SAddress2 varchar(255),
+SCity varchar(255) not null,
+SPincode int,
+SState varchar(255) not null,
+SSalAmt int not null,
+STarget int not null,
+SYtdSale int not null,
+SRemarks varchar(255),
+primary key(SNo)
+);
+
+desc SALESMAN;
+
+SHOW TABLES;
+
+INSERT into CLIENT values('C01' , 'Ivan bayross' , 'Mumbai' , 400054 , 'Maharashtra' , 15000);
+INSERT into CLIENT values('C02' , 'Mamta muzumdar' , 'Madras' , 780001 , 'Tamil nadu' , 0 );
+INSERT into CLIENT values('C03' , 'Chhaya bankar' , 'Mumbai' , 400057 , 'Maharashtra' , 5000 );
+INSERT into CLIENT values('C04' , 'Ashwini  joshi' , 'Bangalore' , 560001 , 'Karnataka' , 0 );
+INSERT into CLIENT values('C05' , 'Hansel colaco' , 'Mumbai' , 400060 , 'Maharashtra' , 2000 );
+INSERT into CLIENT values('C06' , 'Deepak sharma' , 'Mangalore' , 560050 , 'Karnataka' , 0 );
+
+SELECT * FROM CLIENT;
+
+
+INSERT into PRODUCT values('P01' , 'T-Shirt' , 5, 'Piece' , 200	, 50 , 250 , 350);
+INSERT into PRODUCT values('P02' , 'Shirts' , 6 , 'Piece' , 150 , 50 , 350 , 500);
+INSERT into PRODUCT values('P03' , 'Cotton jeans' , 5 , 'Piece' , 100 , 20 , 450 , 600);
+INSERT into PRODUCT values('P04' , 'Jeans' , 5 , 'Piece' , 100 , 20 , 500 , 750);
+INSERT into PRODUCT values('P05' , 'Trousers' , 2 , 'Piece' , 150 , 50 , 550 , 850);
+INSERT into PRODUCT values('P06' , 'Pull Overs' , 2.5 , 'Piece' , 80 , 30 , 450 , 700);
+INSERT into PRODUCT values('P07' , 'Denim jeans' , 4 , 'Piece' , 100 , 40 , 250 , 350);
+INSERT into PRODUCT values('P08' , 'Lycra tops' , 5 , 'Piece' , 70 , 30 , 175 , 300);
+INSERT into PRODUCT values('P09' , 'Skirts' , 5 , 'Piece' , 75 , 30 , 300 , 450);
+
+SELECT * FROM PRODUCT;
+
+
+INSERT into SALESMAN values('S01' , 'Aman' , 'A/14' , 'Worli' , 'Mumbai' , 400002 , 'Maharashtra' , 3000 , 100 , 50 , 'Good');
+INSERT into SALESMAN values('S02' , 'Omkar' , 65 , 'Nariman' , 'Mumbai' , 400001 , 'Maharashtra' , 3000 , 200 , 100 , 'Good');
+INSERT into SALESMAN values('S03' , 'Raj' , 'P-7' , 'Bandra' , 'Mumbai' , 400032 , 'Maharashtra' , 3000 , 200 , 100 , 'Good');
+INSERT into SALESMAN values('S04' , 'Ashish' , 'A/5' , 'Juhu' , 'Mumbai' , 400044 , 'Maharashtra' , 3500 , 200 , 150 , 'Good');
+
+SELECT * FROM IOT_SALESMAN41;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
